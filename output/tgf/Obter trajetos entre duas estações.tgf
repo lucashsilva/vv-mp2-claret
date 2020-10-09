@@ -1,0 +1,38 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+#
+1 2 [c] o sistema está rodando. o menu principal está sendo mostrado na interface
+2 3 [s] Underground User o usuário entra com a opção 1 - Encontrar Trajeto(s)
+3 4 [e] system o sistema pergunta qual a estação de origem
+4 5 [s] Underground User o usuário digita o nome da estação de origem
+5 6 [e] system o sistema pergunta qual a estação de destino
+6 7 [s] Underground User o usuário digita o nome da estação de destino
+7 8 [e] system o sistema pergunta o número de trajetos para exibir
+8 9 [s] Underground User o usuário digita o número de trajetos para exibir
+9 10 [e] system o sistema pergunta se o usuário quer excluir alguma linha
+10 11 [s] Underground User o usuário digita S ou N 
+11 12 [e] system o sistema mostra os trajetos
+12 13 [c] o menu principal está sendo mostrado na interface
+8 14 [s] Underground User o usuário digita S
+14 15 [e] system o sistema pergunta o nome da estação a ser excluída
+15 11 [s] Underground User o usuário digita o nome da estação a ser excluída
+8 9 [s] Underground User o usuário digita N
+10 16 [s] Underground User o usuário digita S
+16 17 [e] system o sistema pergunta o nome da estação a ser excluída
+17 11 [s] Underground User o usuário digita o nome da estação a ser excluída
+10 9 [s] Underground User o usuário digita N

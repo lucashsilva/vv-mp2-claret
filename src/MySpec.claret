@@ -1,0 +1,42 @@
+/*
+ * This is an example claret specification
+ */
+systemName "London Underground"
+
+maxTestCaseSize 5
+
+usecase "Obter trajetos entre duas estações" {
+	version "0.1" type "Consulta Trajeto" user "Grupo 7" date "08/10/2020"
+	actor person "Underground User"
+	
+	preCondition "o sistema está rodando", "o menu principal está sendo mostrado na interface"
+	
+	basic {
+		step 1 person "o usuário entra com a opção 1 - Encontrar Trajeto(s)"
+		step 2 system "o sistema pergunta qual a estação de origem"
+		step 3 person "o usuário digita o nome da estação de origem"
+		step 4 system "o sistema pergunta qual a estação de destino"
+		step 5 person "o usuário digita o nome da estação de destino"
+		step 6 system "o sistema pergunta o número de trajetos para exibir"
+		step 7 person "o usuário digita o número de trajetos para exibir" af[1, 2]
+		step 8 system "o sistema pergunta se o usuário quer excluir alguma linha"
+		step 9 person "o usuário digita S ou N " af[1, 2]
+		step 10 system "o sistema mostra os trajetos"
+	}
+	
+	// Alternatives scenarios here...
+	alternative 1 "excluir linha" {
+		step 1 person "o usuário digita S"
+		step 2 system "o sistema pergunta o nome da estação a ser excluída"
+		step 3 person "o usuário digita o nome da estação a ser excluída" bs 10
+	}
+	
+	alternative 2 "nao excluir linha" {
+		step 1 person "o usuário digita N" bs 8
+	}
+	
+	// Exceptions scenarios here...
+
+
+	postCondition "o menu principal está sendo mostrado na interface"
+}
