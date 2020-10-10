@@ -3,10 +3,10 @@
  */
 systemName "London Underground"
 
-maxTestCaseSize 5
+maxTestCaseSize 1
 
 usecase "Obter trajetos entre duas estacoes" {
-	version "0.2" type "Consulta Trajeto" user "Grupo 7" date "09/10/2020"
+	version "0.3	" type "Consulta Trajeto" user "Grupo 7" date "09/10/2020"
 	actor person "Underground User"
 	
 	preCondition "o sistema esta rodando", "o menu principal esta sendo mostrado na interface"
