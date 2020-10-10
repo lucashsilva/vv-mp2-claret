@@ -5,38 +5,50 @@ systemName "London Underground"
 
 maxTestCaseSize 5
 
-usecase "Obter trajetos entre duas estações" {
-	version "0.1" type "Consulta Trajeto" user "Grupo 7" date "08/10/2020"
+usecase "Obter trajetos entre duas estacoes" {
+	version "0.2" type "Consulta Trajeto" user "Grupo 7" date "09/10/2020"
 	actor person "Underground User"
 	
-	preCondition "o sistema está rodando", "o menu principal está sendo mostrado na interface"
+	preCondition "o sistema esta rodando", "o menu principal esta sendo mostrado na interface"
 	
 	basic {
-		step 1 person "o usuário entra com a opção 1 - Encontrar Trajeto(s)"
-		step 2 system "o sistema pergunta qual a estação de origem"
-		step 3 person "o usuário digita o nome da estação de origem"
-		step 4 system "o sistema pergunta qual a estação de destino"
-		step 5 person "o usuário digita o nome da estação de destino"
-		step 6 system "o sistema pergunta o número de trajetos para exibir"
-		step 7 person "o usuário digita o número de trajetos para exibir" af[1, 2]
-		step 8 system "o sistema pergunta se o usuário quer excluir alguma linha"
-		step 9 person "o usuário digita S ou N " af[1, 2]
-		step 10 system "o sistema mostra os trajetos"
+		step 1 person "o usuario entra com a opcao 1 - Encontrar Trajeto(s)"
+		step 2 system "o sistema pergunta qual a estacao de origem" 
+		step 3 person "o usuario digita o nome da estacao de origem" af[3]
+		step 4 system "o sistema pergunta qual a estacao de destino" ef[1]
+		step 5 person "o usuario digita o nome da estacao de destino" af[3]
+		step 6 system "o sistema pergunta o numero de trajetos para exibir" ef[2] 
+		step 7 person "o usuario digita o numero de trajetos para exibir" af[1, 2, 3]
+		step 8 system "o sistema pergunta se o usuario quer excluir alguma linha"
+		step 9 person "o usuario digita S ou N " af[1, 2, 3]
+		step 10 system "o sistema mostra os trajetos" 
 	}
 	
 	// Alternatives scenarios here...
 	alternative 1 "excluir linha" {
-		step 1 person "o usuário digita S"
-		step 2 system "o sistema pergunta o nome da estação a ser excluída"
-		step 3 person "o usuário digita o nome da estação a ser excluída" bs 10
+		step 1 person "o usuario digita S"
+		step 2 system "o sistema pergunta o nome da estacao a ser excluida"
+		step 3 person "o usuario digita o nome da estacao a ser excluida" bs 10
 	}
 	
 	alternative 2 "nao excluir linha" {
-		step 1 person "o usuário digita N" bs 8
+		step 1 person "o usuario digita N" bs 10
+	}
+	
+	alternative 3 "sair do sistema" {
+		step 1 person "o usuario aperta esc" bs 1
 	}
 	
 	// Exceptions scenarios here...
-
-
-	postCondition "o menu principal está sendo mostrado na interface"
+	
+	exception 1 "a estacao de origem digitada nao existe" {
+		step 1 system "o sistema volta a perguntar o nome da estacao" bs 3
+	}
+	
+	exception 2 "a estacao de destino digitada nao existe" {
+		step 1 system "o sistema volta a perguntar o nome da estacao" bs 5
+	}
+		
+		
+	postCondition "o menu principal esta sendo mostrado na interface"
 }
