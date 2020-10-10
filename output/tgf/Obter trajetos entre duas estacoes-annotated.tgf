@@ -41,56 +41,72 @@
 41 41
 42 42
 43 43
+44 44
+45 45
+46 46
+47 47
+48 48
+49 49
+50 50
+51 51
 #
-1 18 conditions
-18 2 o sistema esta rodando. o menu principal esta sendo mostrado na interface
-2 19 steps
-19 3 Underground User o usuario entra com a opcao 1 - Encontrar Trajeto(s)
-3 20 expected_results
-20 4 system o sistema pergunta qual a estacao de origem
-4 21 steps
-21 5 Underground User o usuario digita o nome da estacao de origem
-5 22 expected_results
-22 6 system o sistema pergunta qual a estacao de destino
-6 23 steps
-23 7 Underground User o usuario digita o nome da estacao de destino
-7 24 expected_results
-24 8 system o sistema pergunta o numero de trajetos para exibir
-8 25 steps
-25 9 Underground User o usuario digita o numero de trajetos para exibir
-9 26 expected_results
-26 10 system o sistema pergunta se o usuario quer excluir alguma linha
-10 27 steps
-27 11 Underground User o usuario digita S ou N 
-11 28 expected_results
-28 12 system o sistema mostra os trajetos
-12 29 conditions
-29 13 o menu principal esta sendo mostrado na interface
-4 30 steps
-30 2 Underground User o usuario aperta esc
-5 31 expected_results
-31 4 system o sistema volta a perguntar o nome da estacao
-6 32 steps
-32 2 Underground User o usuario aperta esc
-7 33 expected_results
-33 6 system o sistema volta a perguntar o nome da estacao
-8 34 steps
-34 14 Underground User o usuario digita S
+1 22 conditions
+22 2 o sistema esta rodando. o menu principal esta sendo mostrado na interface
+2 23 steps
+23 3 Underground User o usuario entra com a opcao 1 - Encontrar Trajeto(s)
+3 24 expected_results
+24 4 system o sistema pergunta qual a estacao de origem
+4 25 steps
+25 5 Underground User o usuario digita o nome da estacao de origem
+5 26 expected_results
+26 6 system o sistema pergunta qual a estacao de destino
+6 27 steps
+27 7 Underground User o usuario digita o nome da estacao de destino
+7 28 expected_results
+28 8 system o sistema pergunta o numero de trajetos para exibir
+8 29 steps
+29 9 Underground User o usuario digita o numero de trajetos para exibir
+9 30 expected_results
+30 10 system o sistema pergunta se o usuario quer excluir alguma linha
+10 31 steps
+31 11 Underground User o usuario digita S ou N 
+11 32 expected_results
+32 12 system o sistema mostra os trajetos
+12 33 conditions
+33 13 o menu principal esta sendo mostrado na interface
+4 34 steps
+34 14 Underground User o usuario aperta esc
 14 35 expected_results
-35 15 system o sistema pergunta o nome da estacao a ser excluida
-15 36 steps
-36 11 Underground User o usuario digita o nome da estacao a ser excluida
-8 37 steps
-37 11 Underground User o usuario digita N
-8 38 steps
-38 2 Underground User o usuario aperta esc
-10 39 steps
-39 16 Underground User o usuario digita S
-16 40 expected_results
-40 17 system o sistema pergunta o nome da estacao a ser excluida
-17 41 steps
-41 11 Underground User o usuario digita o nome da estacao a ser excluida
-10 42 steps
-42 11 Underground User o usuario digita N
-10 43 steps
-43 2 Underground User o usuario aperta esc
+35 13 system a operacao eh cancelada
+5 36 expected_results
+36 4 system o sistema volta a perguntar o nome da estacao
+6 37 steps
+37 15 Underground User o usuario aperta esc
+15 38 expected_results
+38 13 system a operacao eh cancelada
+7 39 expected_results
+39 6 system o sistema volta a perguntar o nome da estacao
+8 40 steps
+40 16 Underground User o usuario digita S
+16 41 expected_results
+41 17 system o sistema pergunta o nome da estacao a ser excluida
+17 42 steps
+42 11 Underground User o usuario digita o nome da estacao a ser excluida
+8 43 steps
+43 11 Underground User o usuario digita N
+8 44 steps
+44 18 Underground User o usuario aperta esc
+18 45 expected_results
+45 13 system a operacao eh cancelada
+10 46 steps
+46 19 Underground User o usuario digita S
+19 47 expected_results
+47 20 system o sistema pergunta o nome da estacao a ser excluida
+20 48 steps
+48 11 Underground User o usuario digita o nome da estacao a ser excluida
+10 49 steps
+49 11 Underground User o usuario digita N
+10 50 steps
+50 21 Underground User o usuario aperta esc
+21 51 expected_results
+51 13 system a operacao eh cancelada

@@ -6,7 +6,7 @@ systemName "London Underground"
 maxTestCaseSize 1
 
 usecase "Obter trajetos entre duas estacoes" {
-	version "0.3	" type "Consulta Trajeto" user "Grupo 7" date "09/10/2020"
+	version "0.5" type "Consulta Trajeto" user "Grupo 7" date "09/10/2020"
 	actor person "Underground User"
 	
 	preCondition "o sistema esta rodando", "o menu principal esta sendo mostrado na interface"
@@ -21,10 +21,11 @@ usecase "Obter trajetos entre duas estacoes" {
 		step 7 person "o usuario digita o numero de trajetos para exibir" af[1, 2, 3]
 		step 8 system "o sistema pergunta se o usuario quer excluir alguma linha"
 		step 9 person "o usuario digita S ou N " af[1, 2, 3]
-		step 10 system "o sistema mostra os trajetos" 
+		step 10 system "o sistema mostra os trajetos"
 	}
 	
 	// Alternatives scenarios here...
+	
 	alternative 1 "excluir linha" {
 		step 1 person "o usuario digita S"
 		step 2 system "o sistema pergunta o nome da estacao a ser excluida"
@@ -35,8 +36,9 @@ usecase "Obter trajetos entre duas estacoes" {
 		step 1 person "o usuario digita N" bs 10
 	}
 	
-	alternative 3 "sair do sistema" {
-		step 1 person "o usuario aperta esc" bs 1
+	alternative 3 "cancelar operacao" {
+		step 1 person "o usuario aperta esc"
+		step 2 system "a operacao eh cancelada"
 	}
 	
 	// Exceptions scenarios here...

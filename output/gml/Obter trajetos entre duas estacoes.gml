@@ -85,6 +85,26 @@ node
   id 17
   label "17"
 ]
+node
+[
+  id 18
+  label "18"
+]
+node
+[
+  id 19
+  label "19"
+]
+node
+[
+  id 20
+  label "20"
+]
+node
+[
+  id 21
+  label "21"
+]
 edge
 [
   source 1
@@ -160,8 +180,14 @@ edge
 edge
 [
   source 4
-  target 2
+  target 14
   label "[s] Underground User o usuario aperta esc"
+]
+edge
+[
+  source 14
+  target 13
+  label "[e] system a operacao eh cancelada"
 ]
 edge
 [
@@ -172,8 +198,14 @@ edge
 edge
 [
   source 6
-  target 2
+  target 15
   label "[s] Underground User o usuario aperta esc"
+]
+edge
+[
+  source 15
+  target 13
+  label "[e] system a operacao eh cancelada"
 ]
 edge
 [
@@ -184,36 +216,6 @@ edge
 edge
 [
   source 8
-  target 14
-  label "[s] Underground User o usuario digita S"
-]
-edge
-[
-  source 14
-  target 15
-  label "[e] system o sistema pergunta o nome da estacao a ser excluida"
-]
-edge
-[
-  source 15
-  target 11
-  label "[s] Underground User o usuario digita o nome da estacao a ser excluida"
-]
-edge
-[
-  source 8
-  target 11
-  label "[s] Underground User o usuario digita N"
-]
-edge
-[
-  source 8
-  target 2
-  label "[s] Underground User o usuario aperta esc"
-]
-edge
-[
-  source 10
   target 16
   label "[s] Underground User o usuario digita S"
 ]
@@ -231,6 +233,42 @@ edge
 ]
 edge
 [
+  source 8
+  target 11
+  label "[s] Underground User o usuario digita N"
+]
+edge
+[
+  source 8
+  target 18
+  label "[s] Underground User o usuario aperta esc"
+]
+edge
+[
+  source 18
+  target 13
+  label "[e] system a operacao eh cancelada"
+]
+edge
+[
+  source 10
+  target 19
+  label "[s] Underground User o usuario digita S"
+]
+edge
+[
+  source 19
+  target 20
+  label "[e] system o sistema pergunta o nome da estacao a ser excluida"
+]
+edge
+[
+  source 20
+  target 11
+  label "[s] Underground User o usuario digita o nome da estacao a ser excluida"
+]
+edge
+[
   source 10
   target 11
   label "[s] Underground User o usuario digita N"
@@ -238,7 +276,13 @@ edge
 edge
 [
   source 10
-  target 2
+  target 21
   label "[s] Underground User o usuario aperta esc"
+]
+edge
+[
+  source 21
+  target 13
+  label "[e] system a operacao eh cancelada"
 ]
 ]

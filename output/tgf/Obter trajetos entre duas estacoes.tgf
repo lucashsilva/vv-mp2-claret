@@ -15,6 +15,10 @@
 15 15
 16 16
 17 17
+18 18
+19 19
+20 20
+21 21
 #
 1 2 [c] o sistema esta rodando. o menu principal esta sendo mostrado na interface
 2 3 [s] Underground User o usuario entra com a opcao 1 - Encontrar Trajeto(s)
@@ -28,17 +32,21 @@
 10 11 [s] Underground User o usuario digita S ou N 
 11 12 [e] system o sistema mostra os trajetos
 12 13 [c] o menu principal esta sendo mostrado na interface
-4 2 [s] Underground User o usuario aperta esc
+4 14 [s] Underground User o usuario aperta esc
+14 13 [e] system a operacao eh cancelada
 5 4 [e] system o sistema volta a perguntar o nome da estacao
-6 2 [s] Underground User o usuario aperta esc
+6 15 [s] Underground User o usuario aperta esc
+15 13 [e] system a operacao eh cancelada
 7 6 [e] system o sistema volta a perguntar o nome da estacao
-8 14 [s] Underground User o usuario digita S
-14 15 [e] system o sistema pergunta o nome da estacao a ser excluida
-15 11 [s] Underground User o usuario digita o nome da estacao a ser excluida
-8 11 [s] Underground User o usuario digita N
-8 2 [s] Underground User o usuario aperta esc
-10 16 [s] Underground User o usuario digita S
+8 16 [s] Underground User o usuario digita S
 16 17 [e] system o sistema pergunta o nome da estacao a ser excluida
 17 11 [s] Underground User o usuario digita o nome da estacao a ser excluida
+8 11 [s] Underground User o usuario digita N
+8 18 [s] Underground User o usuario aperta esc
+18 13 [e] system a operacao eh cancelada
+10 19 [s] Underground User o usuario digita S
+19 20 [e] system o sistema pergunta o nome da estacao a ser excluida
+20 11 [s] Underground User o usuario digita o nome da estacao a ser excluida
 10 11 [s] Underground User o usuario digita N
-10 2 [s] Underground User o usuario aperta esc
+10 21 [s] Underground User o usuario aperta esc
+21 13 [e] system a operacao eh cancelada
